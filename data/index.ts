@@ -1,9 +1,11 @@
 import { Category } from "../type/category";
 import { Product } from "../type/products";
+import { Users } from "../type/users";
 
 type Data = {
   categories: Category[];
   products: Product[];
+  users: Users[];
 };
 export const data: Data = {
   categories: [
@@ -263,6 +265,15 @@ export const data: Data = {
       title: "Campos de Trigo",
       description: "Cenas pastorais tranquilas, brisa suave.",
       price: 31.99,
+    },
+  ],
+  users: [
+    {
+      id: 4,
+      image:
+        "https://static.vecteezy.com/system/resources/previews/000/439/863/original/vector-users-icon.jpg",
+      name: "Matheus Manoel Berto da Silva",
+      idade: 29,
     },
   ],
 };

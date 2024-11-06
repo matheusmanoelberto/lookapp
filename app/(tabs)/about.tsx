@@ -1,15 +1,16 @@
 import { View, StyleSheet, FlatList } from "react-native";
-import { getAllProducts } from "../../services/products";
-import { Producitem } from "../../components/product-item";
+import { getAllUsers } from "../../services/users";
+import { AboutUsers } from "../../components/about-user";
+import { getUsersById } from "../../services/users";
 
 export default function Screen() {
-  const products = getAllProducts();
+  const users = getAllUsers();
 
   return (
     <View style={styles.container}>
       <FlatList
-        data={products}
-        renderItem={({ item }) => <Producitem data={item} />}
+        data={users}
+        renderItem={({ item }) => <AboutUsers data={item} />}
         keyExtractor={(item) => item.id.toString()}
         style={styles.list}
       />
